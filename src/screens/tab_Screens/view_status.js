@@ -18,6 +18,8 @@ import AudioRecorderPlayer, {
   } from 'react-native-audio-recorder-player';
 import {useIsFocused} from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Mic from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {Header, FAB} from 'react-native-elements';
 import GradButton from '../../components/gradient_button';
 import {msgPlay,voice,attach,
@@ -443,81 +445,82 @@ function status (props){
                <PRButton
                     txt = {'Decline'}
                     navigation={()=>setdecmodal(true)}
-                    txtstyle={[styles.heading,{fontWeight:'600',fontSize:16,marginTop:0,alignSelf:'center',color:'white'}]}
+                    txtstyle={[styles.heading,{fontWeight:'600',fontSize:18,marginTop:0,alignSelf:'center',color:'white'}]}
                     btnstyle={{marginTop:responsiveHeight(3),alignSelf:'center',alignItems:'center',justifyContent:'center',width:'87%',height:48,borderRadius:10,backgroundColor:'#FFA0A0'}}
                 />
 
-            <View
-                style={{
-                    borderTopWidth: 0.3,
-                    borderTopColor: '#E1E3E6',
-                    // position: 'absolute',
-                    bottom: 0,
-                    alignSelf:'center',
-                    // alignSelf: 'flex-end',
-                    marginTop:responsiveHeight(3),
-                    // justifyContent:'center',
-                    // alignItems:'center',
-                    width: '87%',
-                    height: 56,
-                }}>
-                {/* <View style={{marginTop: responsiveScreenHeight(1.5)}}></View> */}
                 <View
                     style={{
-                    flexDirection: 'row',
+                        // borderTopWidth: 0.3,
+                        // borderTopColor: '',
+                        // position: 'absolute',
+                        bottom: 0,
+                        alignSelf:'center',
+                        // alignSelf: 'flex-end',
+                        marginTop:responsiveHeight(3),
+                        // justifyContent:'center',
+                        // alignItems:'center',
+                        width: '87%',
+                        height: 56,
                     }}>
-                   
+                    {/* <View style={{marginTop: responsiveScreenHeight(1.5)}}></View> */}
                     <View
-                    style={{
-                        // marginLeft:11,
-                        // marginTop:8,
-                        alignSelf: 'center',
-                        // backgroundColor:'red',
-                        // marginBottom:12,
-                        width: '85%',
-                        flexDirection:'row',
-                        height: 45,
-                        backgroundColor:'rgba(124, 255, 4, 0.16)',
-                        borderRadius: 8,
-                        alignItems: 'center',
-                        justifyContent:'center'
-                    }}>
-                        <TouchableOpacity style={{width:25,height:25,alignSelf:'center',alignItems:'center'}} >
-                            <Image source={attach} style={{width:18,height:20}} />
-                        </TouchableOpacity>
-                    <TextInput
-                        multiline
-                        // value={value}
-                        // onChangeText={onChangeText}
-                        placeholder={'Type message...'}
-                        placeholderTextColor={'black'}
-                        style={
-                        {
-                            // backgroundColor: 'white',
-                            // margin: 10,
-                            paddingLeft:20,
-                            width: '90%',
-                            color: 'black',
-                            height: 'auto',
-                        }}
-                    />
-                    </View>
-                    <TouchableOpacity
-                    // disabled={value !== '' ? false : true}
-                    // onPress={onPress}
-                    style={{
-                        width: '12%',
-                        alignItems: 'center',
-                        backgroundColor:'rgba(124, 255, 4, 0.16)',
-                        justifyContent: 'center',
-                        borderRadius:8,
-                        height:45,
-                        marginLeft:responsiveWidth(3)
-                    }}>
+                        style={{
+                        flexDirection: 'row',
+                        }}>
                     
-                        <Image source={voice} style={{width: 18, height: 24, margin: 8,tintColor:'#000000'}} />
-                    </TouchableOpacity>
-                </View>
+                        <View
+                        style={{
+                            // marginLeft:11,
+                            // marginTop:8,
+                            alignSelf: 'center',
+                            // backgroundColor:'red',
+                            // marginBottom:12,
+                            width: '87%',
+                            flexDirection:'row',
+                            height: 45,
+                            backgroundColor:'#EAFBDB',
+                            borderRadius: 8,
+                            alignItems: 'center',
+                            justifyContent:'center'
+                        }}>
+                            <TouchableOpacity style={{width:25,height:25,marginBottom:responsiveHeight(1),marginLeft:responsiveHeight(2),alignSelf:'center',alignItems:'center'}} >
+                                {/* <Image source={attach} style={{width:18,height:20}} /> */}
+                                <Icon name="ios-attach"  size={28} color="black" />
+                            </TouchableOpacity>
+                        <TextInput
+                            multiline
+                            // value={value}
+                            // onChangeText={onChangeText}
+                            placeholder={'Type message...'}
+                            placeholderTextColor={'black'}
+                            style={
+                            {
+                                // backgroundColor: 'white',
+                                // margin: 10,
+                                paddingLeft:15,
+                                width: '90%',
+                                color: 'black',
+                                height: 'auto',
+                            }}
+                        />
+                        </View>
+                        <TouchableOpacity
+                        // disabled={value !== '' ? false : true}
+                        // onPress={onPress}
+                        style={{
+                            width: '12%',
+                            alignItems: 'center',
+                            backgroundColor:'#EAFBDB',
+                            justifyContent: 'center',
+                            borderRadius:8,
+                            height:45,
+                            marginLeft:responsiveWidth(1.5)
+                        }}>
+                            <Mic style={{margin:8}} name="microphone" size={28} color="black" />
+                            {/* <Image source={voice} style={{width: 18, height: 24, margin: 8,tintColor:'#000000'}} /> */}
+                        </TouchableOpacity>
+                    </View>
                 </View>
 
                 <Modal

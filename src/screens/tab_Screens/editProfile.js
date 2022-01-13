@@ -6,7 +6,7 @@ import {
     responsiveScreenWidth,
     responsiveWidth,
   } from 'react-native-responsive-dimensions';
-  import LinearGradient from 'react-native-linear-gradient';
+  import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useIsFocused} from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {Header, FAB} from 'react-native-elements';
@@ -50,7 +50,8 @@ function profile (props){
             // photoSize: item.size,
             // photo: url,
             // });
-            setTimeout(() => {
+            setTimeout(async() => {
+                await AsyncStorage.setItem('userdp',single)
                 // setdp()
                 // savepic()
             }, 3000);

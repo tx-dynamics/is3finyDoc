@@ -42,7 +42,7 @@ function home (props){
                         <View style={[styles.infocard,{width:86,height:39,borderRadius:4,justifyContent:'center'}]} >
                             <Text style={[styles.selectiontxt,{margin:0,color:'white',alignSelf:'center'}]} >000</Text>
                         </View>
-                        <Text style={[styles.modaltxt,{fontSize:11,color:'#424242',textAlign:'left',marginTop:responsiveHeight(1.5),backgroundColor:'rgba(124, 255, 4, 0.16)',width:'90%',alignSelf:'center',borderRadius:10  ,height:46,padding:10}]} >Credit is allowed when it is L.E.500 we will contact you{'\n'}when you reach this limit to receive.
+                        <Text style={[styles.modaltxt,{fontSize:11,color:'#424242',textAlign:'left',marginTop:responsiveHeight(1.5),backgroundColor:'rgba(124, 255, 4, 0.16)',width:'95%',alignSelf:'center',borderRadius:10  ,height:46,padding:10}]} >Credit is allowed when it is L.E.500 we will contact you{'\n'}when you reach this limit to receive.
                         </Text>
                     </View> 
                     <Text style={[styles.rqtxt,{alignSelf:"center",width:'88%',marginTop:responsiveHeight(6),marginLeft:0}]} >Pending Inquiries</Text>
