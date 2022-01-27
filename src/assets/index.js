@@ -78,3 +78,6 @@ export const msgPlay = require('./images/msg_play.png');
 export const attach = require('./images/Verctor.png');
 export const inq1 = require('./images/inq_send1.png');
 export const inq2 = require('./images/inq_send2.png');
+export const support = require('./images/support.png');
+export const upload = require('./images/iplad.png');
+export const infodoc = require('./images/infodoc.png');

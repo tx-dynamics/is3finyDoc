@@ -82,10 +82,10 @@ function profile (props){
             // borderBottomColor: '#E1E3E6',
             }}
             leftComponent={
-                <TouchableOpacity style={{width:20,height:20}} onPress={()=>props.navigation.goBack()} >
+                <TouchableOpacity style={{width:20,height:25,marginLeft:10,alignItems:'center',justifyContent:'center',marginTop:-5}} onPress={()=>props.navigation.goBack()} >
                     <Image
                         source = {eback}
-                        style={{width:7,height:15,marginLeft:15}}
+                        style={{width:7,height:15}}
                     />
                 </TouchableOpacity>
             }

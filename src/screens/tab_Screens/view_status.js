@@ -269,7 +269,7 @@ function status (props){
                     leftComponent={
                         <TouchableOpacity 
                         onPress={()=>props.navigation.goBack()} 
-                        style={{}} >
+                        style={{width:30,height:25}} >
                             <Image
                                 source={back}
                                 style={{width:16,height:14,marginLeft:8,marginTop:responsiveHeight(1),tintColor:'white'}}
@@ -478,13 +478,13 @@ function status (props){
                             // marginBottom:12,
                             width: '87%',
                             flexDirection:'row',
-                            height: 45,
+                            height: 48,
                             backgroundColor:'#EAFBDB',
                             borderRadius: 8,
                             alignItems: 'center',
                             justifyContent:'center'
                         }}>
-                            <TouchableOpacity style={{width:25,height:25,marginBottom:responsiveHeight(1),marginLeft:responsiveHeight(2),alignSelf:'center',alignItems:'center'}} >
+                            <TouchableOpacity style={{width:25,height:30,marginLeft:responsiveHeight(2),alignSelf:'center',alignItems:'center'}} >
                                 {/* <Image source={attach} style={{width:18,height:20}} /> */}
                                 <Icon name="ios-attach"  size={28} color="black" />
                             </TouchableOpacity>
@@ -514,7 +514,7 @@ function status (props){
                             backgroundColor:'#EAFBDB',
                             justifyContent: 'center',
                             borderRadius:8,
-                            height:45,
+                            height:48,
                             marginLeft:responsiveWidth(1.5)
                         }}>
                             <Mic style={{margin:8}} name="microphone" size={28} color="black" />

@@ -161,7 +161,7 @@ function list (props){
 
     return(
      <View style={{flex:1}} >
-         <Header  leftstyle={{width:16,height:14,margin:8}} leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {props.navigation} center = {logo} right={lang} left={back}  />
+         <Header  leftstyle={{width:16,height:14,margin:8,alignSelf:'flex-start'}} leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {props.navigation} center = {logo} right={lang} left={back}  />
          <View style={styles.sContainer}>
 
               <View style={styles.inputConatiner} >
@@ -170,7 +170,7 @@ function list (props){
                     placeholderTextColor={'grey'}
                     placeholder={"Search"}
                     onChangeText={value => searchFilterFunction (value)}
-                    style={[styles.input,{alignSelf:'flex-start',marginLeft:10}]}
+                    style={[styles.input,{width:'90%',alignSelf:'flex-start',marginLeft:10}]}
                 />
             </View>
             <FlatList

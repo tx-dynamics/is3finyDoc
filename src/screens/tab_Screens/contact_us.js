@@ -1,5 +1,5 @@
-import React,{useState,useEffect} from 'react'
-import {View,Text,TextInput,TouchableOpacity,PermissionsAndroid,Image,ActivityIndicator,FlatList,Switch} from 'react-native'
+import React,{useState,useEffect,useRef} from 'react'
+import {View,Text,TextInput,TouchableOpacity,TouchableWithoutFeedback,Image,ActivityIndicator,FlatList,Switch} from 'react-native'
 import {
     responsiveHeight,
     responsiveScreenHeight,
@@ -22,7 +22,7 @@ import styles from './styles';
 
 function category (props){
     const [input, setinput] = useState('')
-
+    const msgRef = useRef(null)
     return(
      <View>
          <Header leftstyle={{width:16,height:14,marginLeft:8}} leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {()=>alert('coming soon')} center = {logo} right={lang} left={back}  />
@@ -34,19 +34,22 @@ function category (props){
                 placeholderTextColor={'grey'}
                 placeholder={"Reason"}
                 onChangeText={value => setinput(value)}
-                style={[styles.input,{alignSelf:'flex-start',marginLeft:10,fontSize:14}]}
+                style={[styles.input,{alignSelf:'flex-start',marginLeft:10,fontSize:14,width:'92%'}]}
             />
         </View>
-        <View style={[styles.inputConatiner,{height:144,marginTop:responsiveHeight(5)}]} >
+        <TouchableWithoutFeedback onPress={()=>msgRef.current.focus()}>
+            <View style={[styles.inputConatiner,{height:144,marginTop:responsiveHeight(5)}]} >
             <TextInput
+                ref={msgRef}
                 value={input}
                 multiline={true}
                 placeholderTextColor={'grey'}
                 placeholder={"Your Message"}
                 onChangeText={value => setinput(value)}
-                style={[styles.input,{alignSelf:'flex-start',marginLeft:10,fontSize:14}]}
+                style={[styles.input,{alignSelf:'flex-start',marginLeft:10,fontSize:14,width:'92%'}]}
             />
-        </View>
+            </View>
+        </TouchableWithoutFeedback>
         <View style={{marginTop:responsiveHeight(8)}} >
             <GradButton 
             style={{ 

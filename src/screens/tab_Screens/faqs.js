@@ -63,12 +63,12 @@ function Rqtext (props){
 
     
         return(
-            <View style={{backgroundColor:'white' }}>
+            <View style={{backgroundColor:'white',flex:1 }}>
                 <Header 
                    rightnavigation = {props.navigation}
                    center = {faqsa}
                    centerstyle={{width:40,height:14,marginTop:responsiveHeight(5)}}
-                   leftstyle={{width:16,height:14,marginLeft:8}} leftnavigation = {()=>props.navigation.goBack()}
+                   leftstyle={{width:16,height:14,marginLeft:8,alignSelf:'flex-start'}} leftnavigation = {()=>props.navigation.goBack()}
                    left={back}
                />
        

@@ -2,24 +2,25 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import { NavigationContainer } from '@react-navigation/native';
-import RQText from '../screens/tab_Screens/home_screens/req_text'
-import RQPhoto from '../screens/tab_Screens/home_screens/req_photo'
-import RQVideo from '../screens/tab_Screens/home_screens/req_video'
-import RQVoice from '../screens/tab_Screens/home_screens/req_voice'
+// import RQText from '../screens/tab_Screens/home_screens/req_text'
+// import RQPhoto from '../screens/tab_Screens/home_screens/req_photo'
+// import RQVideo from '../screens/tab_Screens/home_screens/req_video'
+// import RQVoice from '../screens/tab_Screens/home_screens/req_voice'
 import Processing from '../screens/tab_Screens/processing'
 import Category from '../screens/tab_Screens/selec_field'
 import Contact from '../screens/tab_Screens/contact_us'
 import FieldList from '../screens/tab_Screens/field_list'
 
-import PaymentInstruct from '../screens/tab_Screens/payment_instruct'
-import PaymentSelect from '../screens/tab_Screens/payment_select'
-import Payment from '../screens/tab_Screens/payment'
+// import PaymentInstruct from '../screens/tab_Screens/payment_instruct'
+// import PaymentSelect from '../screens/tab_Screens/payment_select'
+// import Payment from '../screens/tab_Screens/payment'
 import Status from '../screens/tab_Screens/view_status'
 import Setting from '../screens/tab_Screens/setting'
 import EditProfile from '../screens/tab_Screens/editProfile'
 import FAQs from '../screens/tab_Screens/faqs'
 import OnlyField from '../screens/tab_Screens/only_field'
 import DeclineHandle from '../screens/tab_Screens/dec_situations'
+import PatientList from '../screens/tab_Screens/patient_list'
 
 const Stack = createStackNavigator();
 
@@ -30,11 +31,11 @@ const AudiofileStack = () => {
       independent={true}
       >
      <Stack.Screen
-        name="RQText"
-        component={RQText}
+        name="PatientList"
+        component={PatientList}
         options={{headerShown: false}}
       />
-      <Stack.Screen
+     {/*  <Stack.Screen
         name="RQPhoto"
         component={RQPhoto}
         options={{headerShown: false}}
@@ -48,7 +49,7 @@ const AudiofileStack = () => {
         name="RQVoice"
         component={RQVoice}
         options={{headerShown: false}}
-      />
+      /> */}
       <Stack.Screen
         name="Processing"
         component={Processing}
@@ -84,7 +85,7 @@ const AudiofileStack = () => {
         component={Otp}
         options={{headerShown: false}}
       /> */}
-      <Stack.Screen
+      {/* <Stack.Screen
         name="PaymentInstruct"
         component={PaymentInstruct}
         options={{headerShown: false}}
@@ -98,7 +99,7 @@ const AudiofileStack = () => {
         name="PaymentSelect"
         component={PaymentSelect}
         options={{headerShown: false}}
-      />
+      /> */}
       <Stack.Screen
         name="Status"
         component={Status}

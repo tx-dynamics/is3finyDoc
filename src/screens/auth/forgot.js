@@ -30,7 +30,7 @@ function signup (props){
     return(
     <KeyboardAwareScrollView showsVerticalScrollIndicator={false} style={styles.mainContainer} >
      <ImageBackground source={patient} style={styles.bg} >
-            <Header leftstyle={{width:16,height:14,marginleft:8}} backgroundColor='transparent' leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {()=>alert('coming soon')} center = {logo} right={lang} left={back}  />
+            <Header leftstyle={{width:16,height:14,marginleft:8,alignSelf:'flex-start'}} backgroundColor='transparent' leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {()=>alert('coming soon')} center = {logo} right={lang} left={back}  />
             <View style={[styles.container,{marginTop:responsiveHeight(20)}]} >
                 <View style={{width:335,alignSelf:'center',alignItems:'flex-start'}} >
                     <Text style={[styles.input,{textAlign:'left',fontWeight:'600',fontSize:24,marginLeft:0}]} >Forgot Password</Text>

@@ -35,7 +35,7 @@ function processing (props){
     if(lable === 'missing'){
     return(
      <View>
-         <Header leftstyle={{width:16,height:14,margin:8}} leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {props.navigation} center = {logo} right={lang} left={back}  />
+         <Header leftstyle={{width:16,height:14,margin:8,alignSelf:'flex-start'}} leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {props.navigation} center = {logo} right={lang} left={back}  />
           <View style={[styles.processingCont,{width:314,height:225,alignItems:'flex-start'}]} >
               <Text style={[styles.cat_txt,{fontSize:14,marginTop:20,marginLeft:10,fontWeight:'700'}]}>Missing Data</Text>
               <Text style={[styles.selectiontxt,{textAlign:'left',lineHeight:20,fontWeight:'400'}]} >Lorem ipsum dolor sit amet, sectetur adipiscing elit. Egestas ac odio uada varius aliquam tristique. Hac cursus arcu massa nulla sagittis convallis pulvinar eget. Suspendisse viverra at amet elementum.</Text>
@@ -80,7 +80,7 @@ function processing (props){
     }else {
         return(
             <View>
-            <Header leftstyle={{width:16,height:14,margin:8}} leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {props.navigation} center = {logo} right={lang} left={back}  />
+            <Header leftstyle={{width:16,height:14,margin:8,alignSelf:'flex-start'}} leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {props.navigation} center = {logo} right={lang} left={back}  />
              <View style={[styles.processingCont,{width:314,height:225,alignItems:'flex-start'}]} >
                  <Text style={[styles.cat_txt,{fontSize:14,marginTop:20,marginLeft:10,fontWeight:'700'}]}>I Don’t Know the answer</Text>
                  <Text style={[styles.selectiontxt,{textAlign:'left',lineHeight:20,fontWeight:'400'}]} >Lorem ipsum dolor sit amet, sectetur adipiscing elit. Egestas ac odio uada varius aliquam tristique. Hac cursus arcu massa nulla sagittis convallis pulvinar eget. Suspendisse viverra at amet elementum.</Text>

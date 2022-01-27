@@ -25,10 +25,10 @@ export default function header({ centerstyle,backgroundColor,leftstyle,leftnavig
             leftComponent={
                 <TouchableOpacity 
                 onPress={leftnavigation} 
-                style={{justifyContent:'center',marginTop:responsiveHeight(4),height:25,width:25,alignItems:'center'}} >
+                style={{justifyContent:'center',marginTop:responsiveHeight(4),height:29,width:83.69,alignItems:'center'}} >
                     <Image
                         source={left}
-                        style={leftstyle?leftstyle:{width:22,height:22,marginLeft:8}}
+                        style={leftstyle?leftstyle:{width:83.69,height:29,marginLeft:8}}
                     />
                 </TouchableOpacity>
             }

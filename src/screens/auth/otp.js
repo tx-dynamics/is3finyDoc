@@ -29,7 +29,7 @@ function signup (props){
     return(
     <KeyboardAwareScrollView style={styles.mainContainer} >
      <ImageBackground source={patient} style={styles.bg} >
-            <Header leftstyle={{width:16,height:14,marginleft:8}} backgroundColor='transparent' leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {()=>alert('coming soon')} center = {logo} right={lang} left={back}  />
+            <Header leftstyle={{width:16,height:14,marginleft:8,alignSelf:'flex-start'}} backgroundColor='transparent' leftnavigation = {()=>props.navigation.goBack()} rightnavigation = {()=>alert('coming soon')} center = {logo} right={lang} left={back}  />
             <View style={[styles.container,{marginTop:responsiveHeight(20)}]} >
                 <View style={{alignSelf:'center',width:355}} >
                     <Text style={[styles.input,{textAlign:'left',fontWeight:'600',fontSize:24}]} >Enter OTP</Text>

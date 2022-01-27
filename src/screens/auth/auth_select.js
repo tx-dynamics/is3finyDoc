@@ -12,7 +12,7 @@ import {useIsFocused} from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../../components/header';
 import GradButton from '../../components/gradient_button';
-import {logo,lang,bullet,call,text,
+import {logo,lang,support,call,text,
     pic,
     patient,
     voice,
@@ -30,7 +30,7 @@ function signup (props){
     return(
     <KeyboardAwareScrollView showsVerticalScrollIndicator={false} style={styles.mainContainer} >
      <ImageBackground source={patient} style={styles.bg} >
-            <Header backgroundColor='transparent' leftnavigation = {()=>props.navigation.navigate('Contact')} rightnavigation = {()=>alert('coming soon')} center = {logo} right={lang} left={call}  />
+            <Header backgroundColor='transparent' leftnavigation = {()=>props.navigation.navigate('Contact')} rightnavigation = {()=>alert('coming soon')} center = {logo} right={lang} left={support}  />
             
             <View style={{marginTop:responsiveHeight(30)}} >
                 <GradButton style={styles.signup}  navigation={()=>props.navigation.navigate('Login')} txt = {'Log In'}/>
